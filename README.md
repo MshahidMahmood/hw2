@@ -1,4 +1,4 @@
-# HW II : Logic
+# HW II : Propositional Logic
 # CS 113 Discrete Mathematics, Spring 2020
 
 -------
