@@ -1,4 +1,4 @@
-# HW II : Propositional Logic
+# HW II : Logic 1
 # CS 113 Discrete Mathematics, Spring 2021
 
 -------
