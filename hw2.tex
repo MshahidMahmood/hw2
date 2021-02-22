@@ -19,7 +19,7 @@
 \newcommand\ol\overline
 
 \title{Homework 2: Logic 1\\ CS 113 Discrete Mathematics\\ Habib University -- Spring 2021}
-\author{Don't Grade Me}  % replace with your ID, e.g. oy02945
+\author{or06360-mm06600}  % replace with your ID, e.g. oy02945
 \date{}
 
 \begin{document}
@@ -33,12 +33,70 @@
   \begin{parts}
   \part[5] $\neg(p \lor q) \equiv \neg p \land \neg q $.
     \begin{solution}
+    \begin{center}
+            \setlength{\tabcolsep}{16pt}  %Sets width
+            \renewcommand{\arraystretch}{1.5} %Sets height
+          \begin{tabular}{|c|c|c|c|c|c|c|} %|c| = 1x column
+              \hline
+              $p$ & $q$ & $\neg p$ & $\neg q$ & $\neg p \land \neg q$ & $ p \lor q$ & $ \neg (p \lor q)$\\ [0.4 ex]
+              % Each '&' (called 'ampersand') separates the text/contents of each column; 
+              % The number of &s should correspond with the number of |c|
+              \hline
+              T & T & F & F & F & T & F\\ [0.4 ex]
+              \hline
+              T & F & F & T & F & T & F\\ [0.4 ex]
+              \hline
+              F & T & T & F & F & T & F\\ [0.4 ex]
+              \hline
+              F & F & T & T & T & F & T\\ [0.4 ex]
+              \hline
+              
+              % as a rule of thumb 
+              %  ' \\ [some spacing ex] \hline '
+              % ends a row; as you may have figured out it doesn't matter if you put that on a single line or not.
+          \end{tabular}
+            \\ %Put your text under the table here, you can keep the table without the center tags but that wouldn't look too nice.
+            \bigskip 
+            Since all the values of $ \neg (p \lor q)$ are exactly the same as $\neg p \land \neg q$. It is proved that it is equal
+           % \\ $p \implies q \equiv  \neg q \implies \neg p $.
+        \end{center}
       % Enter your solution here.
     \end{solution}
 
   \part[5] $ (p \lor q) \implies \neg r \equiv (\neg p \land \neg q) \land \neg r$.
-    \begin{solution} For ease of notation, let
+    \begin{solution} %For ease of notation, let
       % Enter your solution here.
+      \\
+            \setlength{\tabcolsep}{5pt}  %Sets width
+            \renewcommand{\arraystretch}{0.8} %Sets height
+          \begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|} %|c| = 1x column
+              \hline
+              $p$ & $q$ & $r$ & $\neg p$ & $\neg q$ & $\neg r$ & $ p \lor q$ & $ (p \lor q) \implies \neg r$ & $ (\neg p \land \neg q)$ & $ ((\neg p \land \neg q)) \land \neg r$\\ [0.4 ex]
+              % Each '&' (called 'ampersand') separates the text/contents of each column; 
+              % The number of &s should correspond with the number of |c|
+              \hline
+              T & T & T & F & F & F & T & F & F & F\\ [0.4 ex]
+              \hline
+              T & T & F & F & F & T & T & T & F & F\\ [0.4 ex]
+              \hline
+              T & F & T & F & T & F & T & F & F & F\\ [0.4 ex]
+              \hline
+              T & F & F & F & T & T & T & T & F & F\\ [0.4 ex]
+              \hline
+              F & T & T & T & F & F & T & F & F & F\\ [0.4 ex]
+              \hline
+              F & T & F & T & F & T & T & T & F & F\\ [0.4 ex]
+              \hline
+              F & F & T & T & T & F & F & T & T & F\\ [0.4 ex]
+              \hline
+              F & F & F & T & T & T & F & T & T & T\\ [0.4 ex]
+              \hline
+              % as a rule of thumb 
+              %  ' \\ [some spacing ex] \hline '
+              % ends a row; as you may have figured out it doesn't matter if you put that on a single line or not.
+          \end{tabular}
+            \\ %Put your text under the table here, you can keep the table without the center tags but that wouldn't look too nice.
+            \bigskip 
     \end{solution}
     
   \end{parts}
@@ -47,10 +105,17 @@
   \begin{parts}
   \part[5] Identify three simple propositions, $p, q, \text{ and } r$, needed for the representation and write out the corresponding expression that uses them to represent the given sentence.
     \begin{solution} % Complete the solution.
+    \\p: popular
+      \\q: cool
+      \\r: funny
+      \\$p \implies (q \lor r)$
       % Enter your solution here.
     \end{solution}
   \part[5] For your expression identified above, write the converse, contrapositive, and inverse in propositional logic as well as complete English sentences.
     \begin{solution} % Complete the solution.
+    \\converse: $(q \lor r) \implies p$ which means if a person is cool or funny, they are popular.
+      \\contrapositive: $\neg(q \lor r) \implies \neg p$ which means if a person is not cool or funny, they are not popular.
+      \\inverse: $\neg p \implies \neg (q \lor r)$ which means if a person is not popular, they are not cool or funny.
       % Enter your solution here.
     \end{solution}
   \end{parts}
@@ -65,6 +130,7 @@
   \end{enumerate}
   Suppose that a customer places an order for a copper widget that is both green and blue with a matte coating. Your job is to determine which constraints are satisfied and which are violated and provide an explanation.
   \begin{solution} % Complete the solution.
+  Constraint 1 says that the widget is made of either aluminium or copper or iron. It is satisfied because the widget is made of copper. Constraint 2 says that aluminium widget implies the colour will be grey. Since the material is not aluminium, this constraint is also satisfied. Constraint 3 is not satisfied because it is copper and it is not coated but the colour is not red. Constraint 4 is correct because the antecedent is false but the consequent is true so the statement is still true. The last constraint is true because the widget is green and blue and not textured or iron.
     % Enter your solution here.
   \end{solution}
 
@@ -75,6 +141,8 @@
   \end{center}
   Explain your choice.
   \begin{solution}
+  It is implied that any card that has 5 on one side must have J on the other side. If we turn the card with 5 on one side and it has J on the other side this test will be true.
+  but if we chose J there is no specification to what number is written on the other side.
     % Enter your solution here.
   \end{solution}
   
@@ -82,15 +150,93 @@
   \begin{parts}
   \part[5] If I am wealthy, then I am happy. I am happy, therefore, I am wealthy.
     \begin{solution}
-      % Enter your solution here.
+    \\ p: I am wealthy
+    \\ q: I am happy
+    \\ $p \implies q$
+    \\ $q$
+    \\ $p$
+     \begin{center}
+            \setlength{\tabcolsep}{16pt}  %Sets width
+            \renewcommand{\arraystretch}{1.5} %Sets height
+            \begin{tabular}{|c|c|c|c|c|} %|c| = 1x column
+              \hline
+              $p$ & $p$ & $p \implies q$ & $(p \implies q) \land q$ & $((p \implies q) \land q) \implies p$  \\ [0.5 ex]
+              % Each '&' (called 'ampersand') separates the text/contents of each column; 
+              % The number of &s should correspond with the number of |c|
+              \hline
+              T & T & T & T & T\\ [0.5 ex]
+              \hline
+              T & F & F & F & T\\ [0.5 ex]
+              \hline
+              F & T & T & T & F\\ [0.5 ex]
+              \hline
+              F & F & T & F & T\\ [0.5 ex]
+              \hline
+              % as a rule of thumb 
+              %  ' \\ [some spacing ex] \hline '
+              % ends a row; as you may have figured out it doesn't matter if you put that on a single line or not.
+         \end{tabular}
+            \\ %Put your text under the table here, you can keep the table without the center tags but that wouldn't look too nice.
+            \bigskip 
+            The above table indicates that
+            \\ $((p \implies q) \land q) \implies p$ is not True hence its a Fallacy
+        \end{center}
+    
     \end{solution}
   \part[5]
     If Ahmed drives his car, he is at least 18 years old. Ahmed does not drive a car. Therefore, Ahmed is not yet 18 years old. 
     \begin{solution}
       % Enter your solution here.
+    \\ p: Ahmed drives car
+    \\ q: Ahmed is 18 or more
+    \\ $p \implies q$
+    \\ $ \neg q$
+    \\ $\neg p$
+     \begin{center}
+            \setlength{\tabcolsep}{8pt}  %Sets width
+            \renewcommand{\arraystretch}{1.5} %Sets height
+            \begin{tabular}{|c|c|c|c|c|c|c|} %|c| = 1x column
+              \hline
+              $p$ & $p$ & $ \neg p$ & $\neg q$ & $p \implies q$ & $(p \implies q) \land \neg q$ & $((p \implies q) \land \neg q) \implies \neg q$ \\ [0.5 ex]
+              % Each '&' (called 'ampersand') separates the text/contents of each column; 
+              % The number of &s should correspond with the number of |c|
+              \hline
+              T & T & F & F & T & F & T\\ [0.5 ex]
+              \hline
+              T & F & F & F & F & F & T\\ [0.5 ex]
+              \hline
+              F & T & T & T & T & T & F\\ [0.5 ex]
+              \hline
+              F & F & T & T & T & T & F\\ [0.5 ex]
+              \hline
+              % as a rule of thumb 
+              %  ' \\ [some spacing ex] \hline '
+              % ends a row; as you may have figured out it doesn't matter if you put that on a single line or not.
+         \end{tabular}
+            \\ %Put your text under the table here, you can keep the table without the center tags but that wouldn't look too nice.
+            \bigskip 
+            The above table indicates that$((p \implies q) \land \neg q) \implies \neg q$ is not always true hence its a Fallacy
+        \end{center}
     \end{solution}
   \part[5] If I study, then I will not fail CS 113. If I do not play cards too often, then I will study. I failed CS 113. Therefore, I played cards too often.
     \begin{solution}
+     \\ p: I study
+    \\ q: I'll fail  CS 113
+    \\ r: play cards often
+    \\ p1= $p \implies \neg q$
+    \\ p2= $ \neg r \implies p $
+    \\ p3= $ q $
+    \\conclusion= $r$
+    \\
+    \\$\neg(\neg q)$ via applying Double negation on p3
+    \\$\neg p$ by applying  Modus Tollens on p1
+    \\$\neg(\neg r)$ by applying  Modus Tollens on $\neg p$
+    \\$ r$ by applying reverse double negation on $\neg(\neg r)$
+    \\after this we can can say that conclusion is correct
+    
+    %\\ $\neg (\neg p)$ gives $\neg p$ using double negation on 1st premise
+    %\\$\neg p$ means $\neg (\neg r)$ using reversed double negation
+
       % Enter your solution here.
     \end{solution}
   \end{parts}
@@ -109,6 +255,28 @@
 
   Identify the relevant simple propositions to model the above in propositional logic. Represent the above situation using propositional logic and describe the steps needed to infer the location of the manual.
   \begin{solution}
+  \\p:TA in Ehsaas
+    \\q:TA is absent
+    \\r: people at Learn Courtyard
+    \\G: hint at gym
+    \\L: hint at Learn Courtyard
+    \begin{enumerate}
+    \item $L \lor G$
+    \item $p \lor q \implies L$
+    \item $\neg p \implies G$
+    \item $r \implies \neg L$
+    \item $L \implies$ Zen Garden
+    \item $G \implies$ Earth Courtyard
+    \item $q \implies$ Fire Courtyard
+    \end{enumerate}
+    $r=T$
+    \\$r \implies \neg L$
+    \\$L \lor G$
+    \\$\neg L \implies G$
+    \\$G \implies$ Earth Courtyard
+    \\The manual is at the Earth Courtyard
+    
+  
     % Enter your solution here.
   \end{solution}
 
@@ -119,6 +287,11 @@
   \part[5] There is a third quantifier often used in predicate logic called the \textit{Uniqueness Quantifier}, $\exists!x\; P(x)$ which is read as, ``$P(x)$ is true for one and only one $x$ in the domain'', or ``there is a \textit{unique} $x$ such that $P(x)$''. Give an example of a propositional function $P(x)$ and a corresponding domain, such that $\exists!x\; P(x)$ is a true proposition.
     \begin{solution}
       % Enter your solution here.
+      Domain = $\mathbb{R}$
+      \\ $\exists!x\; P((x^2+1=2x))$
+      \\ This proposition is only true when the value of x=1.
+      %\ $\exists!x\; P(1)$
+      
     \end{solution}
     
   \part[5] The uniqueness quantifier can be expressed using the other two quantifiers but is still used on its own as it shortens the logical terms. In particular,
@@ -127,11 +300,16 @@
     \end{align}
     Express the proposition on the right above in English and explain why it is equivalent to the left hand side, i.e. to the uniquely quantified propositional function. You may explain in words; a formal proof is not yet required.
     \begin{solution}
+    propositional function of y implies that y equals x for all values of y and propositional function of x is true for some values of x.
       % Enter your solution here.
     \end{solution}
     
   \part[5] Express $\neg \exists!xP\; (x)$ in a similar way as (\ref{eq:uniq}). Provide an expression in formal notation as well as in English. Also, give an example of a true proposition $\neg\exists!x\; P(x)$ by slightly changing the one you gave in part (a).
     \begin{solution}
+    Domain = $\mathbb{R}$
+      \\ $\neg \exists!x\; P((x^2+1=2x))$
+      \\ This proposition is only true when the value of x is not equal to 1.
+      \\ example of a true proposition for this expression will be x=2.
       % Enter your solution here.
     \end{solution}
   \end{parts}
@@ -148,23 +326,44 @@
   \begin{parts}
   \part[5] No one can have Pakistani and Indian citizenship.
     \begin{solution}
+    \\ P are Pakistani Citizens
+    \\ I are Indian citizens
+    \\ 1. $\forall  (P \implies \neg I)$
+    \\2. $\exists  (P \land I)$
+    \\3. There exists a person who is both, a citizen of Pakistan and India.
       % Enter your solution here.
     \end{solution}
 
   \part[5] If everyone does their homework and goes to the recitations, no one will be badly prepared for the exams.
     \begin{solution}
+    H(x) are people who did the hw.
+    \\R(x) are the people who attended the recitation.
+    \\E(x) are the people who performed badly in exam.
+    \\ 1. $(H(x) \land R(x))\implies \forall x \neg E(x)$
+    \\2. $(H(x) \land R(x))\implies \exists x E(x)$
+    \\3. For everyone who did do the home work and attended the recitations there exists at least one person who didn't do well in the exam.
       % Enter your solution here.
     \end{solution}
 
 
   \part[5] No student has solved at least one exercise in every section of the book.
     \begin{solution}
+    \\S(x)are students
+    \\E(x) who have done excercise from each section
+    \\1. $\forall x \exists x(S(x) \land  \neg E(x))  $
+    \\2 $\exists x \forall x (S(x) \land  E(x)$
+    \\3.At least one student has solved some exercises in every section of the book
       % Enter your solution here.
     \end{solution}
 
     
   \part[5] No one has climbed every mountain in Pakistan.
     \begin{solution}
+    M(x) are mountains in Pakistan.
+    \\ P(x) are people.
+    \\ 1. $\forall x \neg (M(x) \land P(x))$
+    \\2. $\exists x (M(x) \land P(x))$
+    \\3. There is someone who has climbed every mountain in Pakistan.
       % Enter your solution here.
     \end{solution}
   \end{parts}
@@ -180,11 +379,13 @@
   \begin{parts}
   \part[5] $\exists p\; (F(p) \land B(p)) \rightarrow \exists j\; L(j)$
     \begin{solution}
+    If some printers are out of service and busy implies that there will be some print jobs that are lost.
       % Enter your solution here.
     \end{solution}
     
   \part[5] $(\forall p\; B(p) \land \forall j\; Q(j)) \rightarrow \exists j\; L(j)$
     \begin{solution}
+     If all printers are busy and all print jobs are queued it implies that there will be some print jobs that are lost.
       % Enter your solution here.
     \end{solution}
   \end{parts}
@@ -193,11 +394,18 @@
   \begin{parts}
   \part[5] At least one mail message can be saved if there is a disk with more than 10KB of free space.
     \begin{solution}
+    \\S(x) is space $>$ 10KB
+    \\ M(x) is mail saved
+    \\ $ \exists x (S(x) \implies M(x))$
       % Enter your solution here.
     \end{solution}
 
   \part[5] The system mailbox can be accessed by everyone in the group if the file system is locked.
     \begin{solution}
+    \\ B(x) is access
+    \\ G(x) is members of group
+    \\ F(x) is locked file system
+    \\ $( \forall x (G(x) \implies B(x) ) \land F(x)$
       % Enter your solution here.
     \end{solution}
   \end{parts}
@@ -213,22 +421,34 @@
   \begin{parts}
   \part[5] $\forall x \forall y\; (x^2= y^2 \rightarrow x=y)$
     \begin{solution}
+    \\1. For all values of x and y if $x^2 = y^2$ it implies that x will be equal to y.
+    \\ 2. False. As it does not hold for all values. counter example x= -1 and y= 1 where the 1st part will be true while the 2nd part will not hold  for negative values giving the overall implication false
+    \\3.Domain is true for positive integers only or it will be true for negative integers only
       % Enter your solution here.
     \end{solution}
 
   \part[5] $\forall x \exists y\; (y^2=x)$
     \begin{solution}
+    \\ 1. All values of x are equal to some values of $y^2$
+    \\2. False. It does not hold true for negative values. If value of x is -1, value of $y^2$ can never be -1
+    \\ 3. Domain is true for positive integers only
       % Enter your solution here.
     \end{solution}
 
   \part[5] $\exists x \forall y\; (x \leq y^2)$
     \begin{solution}
+    \\ 1. Some values of x are less than equal to $y^2$
+    \\2.True. $y^2$ will always be greater than x for all integers
+    \\3. It will be false if the domain was all real numbers
       % Enter your solution here.
     \end{solution}
 
   \part[5] $\forall x \forall y\ \exists z\; (x-z=y)$
     \begin{solution}
-      % Enter your solution here.
+    \\1. All values of x when subtracted by some values of z will give all values of y.  
+    \\2. True There will always exist a value of z that would fill the difference between the value of x and the value of y
+    \\3. Over all false will occur if domain is limited to only positive or only negative integers
+    % Enter your solution here.
     \end{solution}
   \end{parts}
   
